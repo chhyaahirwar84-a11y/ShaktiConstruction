@@ -1,0 +1,541 @@
+.projects-page {
+  background: #fff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.projects-hero {
+  min-height: 60vh;
+  padding: 100px 6%;
+  background: #f5f5f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.projects-hero-content {
+  max-width: 850px;
+}
+
+.projects-hero h1 {
+  margin-top: 25px;
+  font-size: clamp(55px, 7vw, 95px);
+  line-height: 0.94;
+  letter-spacing: -4px;
+}
+
+.projects-hero h1 span {
+  color: #888;
+}
+
+.projects-hero p {
+  max-width: 600px;
+  margin-top: 30px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.projects-hero-side {
+  min-width: 120px;
+}
+
+.projects-hero-side span {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.projects-hero-side p {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #777;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.projects-intro {
+  padding: 110px 6%;
+}
+
+.projects-intro-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 100px;
+}
+
+.projects-intro h2 {
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.projects-intro h2 span {
+  color: #999;
+}
+
+.projects-intro-grid p {
+  color: #666;
+  line-height: 1.8;
+}
+
+/* =========================
+   SHOWCASE
+========================= */
+
+.projects-showcase {
+  padding: 110px 6%;
+  background: #f5f5f3;
+}
+
+.projects-showcase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.projects-showcase-header h2 {
+  margin-top: 15px;
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.projects-showcase-header h2 span {
+  color: #999;
+}
+
+.projects-showcase-header p {
+  max-width: 400px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   REAL WORK ORDER IMAGE
+========================= */
+
+.project-image {
+  height: 330px;
+  position: relative;
+  background: #eeeeea;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #eeeeea;
+}
+
+/* Image overlay */
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Open icon */
+
+.project-open {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5b82e;
+  color: #111;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 3;
+}
+
+.project-card:hover .project-open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Work order number */
+
+.project-image-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5b82e;
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 4;
+}
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+  padding: 28px;
+}
+
+.project-content > span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #999;
+}
+
+.project-content h3 {
+  margin-top: 12px;
+  font-size: 27px;
+  letter-spacing: -1px;
+}
+
+.project-content p {
+  margin-top: 12px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-content button {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #111;
+  padding-bottom: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   WORK AREAS
+========================= */
+
+.work-areas {
+  padding: 120px 6%;
+}
+
+.work-areas-heading {
+  margin-bottom: 50px;
+}
+
+.work-areas-heading h2 {
+  margin-top: 15px;
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.work-areas-heading h2 span {
+  color: #999;
+}
+
+.work-area-list {
+  border-top: 1px solid #ddd;
+}
+
+.work-area-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 30px;
+  padding: 28px 10px;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.work-area-item:hover {
+  padding-left: 20px;
+  background: #f5f5f3;
+}
+
+.work-area-item > span {
+  color: #999;
+  font-size: 11px;
+}
+
+.work-area-item h3 {
+  font-size: 25px;
+}
+
+.work-area-item svg {
+  font-size: 20px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.projects-cta {
+  margin: 80px 6%;
+  padding: 70px;
+  background: #f5f5f3;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.projects-cta h2 {
+  margin-top: 15px;
+  font-size: clamp(35px, 4vw, 55px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.projects-cta h2 span {
+  color: #999;
+}
+
+.projects-cta > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 22px;
+  border-radius: 30px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================
+   WORK ORDER MODAL
+========================= */
+
+.work-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.work-modal-content {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  padding: 45px;
+  overflow: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.modal-work-image {
+  width: 100%;
+  max-height: 80vh;
+  display: block;
+  object-fit: contain;
+  background: #eeeeea;
+  border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .projects-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .projects-showcase-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .projects-hero,
+  .projects-intro,
+  .projects-showcase,
+  .work-areas {
+    padding: 75px 5%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 280px;
+  }
+
+  .work-area-item {
+    grid-template-columns: 40px 1fr auto;
+    gap: 15px;
+  }
+
+  .work-area-item h3 {
+    font-size: 19px;
+  }
+
+  .projects-cta {
+    margin: 50px 5%;
+    padding: 45px 30px;
+  }
+
+  .work-modal {
+    padding: 15px;
+  }
+
+  .work-modal-content {
+    padding: 55px 15px 15px;
+    max-height: 92vh;
+  }
+
+  .modal-work-image {
+    max-height: 80vh;
+  }
+}
+/* =========================
+   WORK ORDER FLIP
+========================= */
+
+.project-image {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.project-image-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.project-image.flipped .project-image-inner {
+  transform: rotateY(180deg);
+}
+
+.project-image-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.project-image-front {
+  transform: rotateY(0deg);
+}
+
+.project-image-back {
+  transform: rotateY(180deg);
+}
+
+.project-image-face img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #eeeeea;
+}
+
+.project-flip-hint {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 5;
+}

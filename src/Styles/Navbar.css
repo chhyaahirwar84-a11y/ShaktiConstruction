@@ -1,0 +1,264 @@
+.navbar {
+  width: 100%;
+  height: 78px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111111;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5b82e;
+  color: #111111;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d99b16;
+}
+
+/* =========================
+   GET IN TOUCH
+========================= */
+
+.nav-button {
+  text-decoration: none;
+  background: #111111;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #f5b82e;
+  color: #111111;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #111111;
+  border-radius: 8px;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-button {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  /* Hide desktop button */
+  .nav-button {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* Mobile navigation */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 10px 5% 20px;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(-15px);
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  /* Open menu */
+  .nav-links.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 15px 5px;
+
+    color: #222222;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    color: #d99b16;
+    padding-left: 10px;
+  }
+
+  /* Hamburger animation */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 66px;
+    padding: 0 4%;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    top: 66px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
